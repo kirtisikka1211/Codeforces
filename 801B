@@ -1,8 +1,21 @@
 n, f = map(int, input().split())
-a=[]
-c =0
+moresell=[]
+cansell =0
 
 for i in range(n):
     x, y = map(int, input().split())
+    cansell =cansell + min(x, y)
 
-print(c)
+    moresell.append(min(2 * x, y) - min(x, y))
+
+moresell.sort(reverse=True)
+
+
+for i in range(f):
+    if i < n:
+        cansell += max(moresell[i], 0)
+     
+    else:
+        break
+
+print(cansell)
