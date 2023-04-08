@@ -12,6 +12,6 @@ for i in range(n):
 moresell.sort(reverse=True)
  
 for i in range(f):
-        cansell += max(moresell[i], 0)
+        cansell +=moresell[i])
  
 print(cansell)
