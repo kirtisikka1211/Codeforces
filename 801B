@@ -1,0 +1,21 @@
+n, f = map(int, input().split())
+a=[]
+c =0
+
+for i in range(n):
+    x, y = map(int, input().split())
+    c =c + min(x, y)
+
+    a.append(min(2 * x, y) - min(x, y))
+
+a.sort(reverse=True)
+
+
+for i in range(f):
+    if i < n:
+        c += max(a[i], 0)
+     
+    else:
+        break
+
+print(c)
