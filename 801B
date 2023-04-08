@@ -1,17 +1,17 @@
 n, f = map(int, input().split())
 moresell=[]
 cansell =0
-
+ 
 for i in range(n):
     x, y = map(int, input().split())
     cansell =cansell + min(x, y)
-
+ 
     moresell.append(min(2 * x, y) - min(x, y))
-
+ 
+ 
 moresell.sort(reverse=True)
-
-
+ 
 for i in range(f):
-  
-
+        cansell += max(moresell[i], 0)
+ 
 print(cansell)
