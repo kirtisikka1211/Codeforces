@@ -12,10 +12,6 @@ moresell.sort(reverse=True)
 
 
 for i in range(f):
-    if i < n:
-        cansell += max(moresell[i], 0)
-     
-    else:
-        break
+  
 
 print(cansell)
